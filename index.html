@@ -10,65 +10,33 @@
         </style>
     </head>
     <body>
+        <!-- titulo -->
         <h1>An interactive web page</h1>
 
+        <!-- seção 1 -->
         <h2>1. Color changer</h2>
         <button id="gray_button">Gray</button>
         <button id="blue_button">Blue</button>
+        <button id="pink_button">Pink</button>
+        <button >
+            <input id="choice_color" type="color">
+        </button>
         <div id="color_box" class="gray"></div>        
-        <script>
-            const color_box = document.getElementById("color_box");
-            
-            const gray_button = document.getElementById("gray_button");
-            gray_button.onclick = function() {
-                color_box.className = "gray";
-            };
-            
-            const blue_button = document.getElementById("blue_button");
-            blue_button.onclick = function () {
-                color_box.className = "blue";
-            };
-
-            /* TODO 1
-             *
-             *  Adicionar um botão e um event handler 
-             *  e o botão torna o quadrado rosa.
-             */
-        </script>
-
         <hr>
 
+        <!-- seção 2 -->
         <h2>2. Counter</h2>
         <button id="counter_button">This fabulous button</button>
-        has been clicked <span id="countspan">0</span> times.
-        <script>
-            let count = 0;
-            const countspan = document.getElementById("countspan");
-            
-            const counter_button = document.getElementById("counter_button");
-            counter_button.onclick = function() {
-                /* TODO 2
-                 *
-                 *  A função incrementa 1 em um contador "count", 
-                 *  atualiza o conteúdo de texto do "countspan" 
-                 *  e mostra o valor atual de "count".
-                 */
-            }
-        </script>
-
+        <button id="counter_btn_reset">Reset</button>
+        has been clicked <span id="countspan"></span> times.
         <hr>
 
+        <!-- seção 3 -->
         <h2>3. Even or Odd?</h2>
         <button id="even_or_odd_button">Is the count even or odd?</button>
-        <script>
-            const even_or_odd_button = document.getElementById("even_or_odd_button");
-            even_or_odd_button.onclick = function() {
-                /* TODO 3
-                 *
-                 * A função mostra um "alert dialog" mostrando se o contador 
-                 * (da segunda tarefa (TODO 2)) é par ou impar.
-                 */
-            }
-        </script>
+        <div id="evenOdd_result"></div>
+
+        <!-- javascript -->
+        <script src="./script.js"></script>
     </body>
 </html>
