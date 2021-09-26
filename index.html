@@ -1,42 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>An interactive web page</title>
-        <style>
-            #color_box { width: 200px; height: 200px; }
-            .gray { background: gray; }
-            .blue { background: rgb(67, 111, 255); }
-            .pink { background: pink; }
-        </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>An interactive web page</title>
     </head>
     <body>
         <!-- titulo -->
-        <h1>An interactive web page</h1>
-
+        <header>
+            <h1>An interactive web page</h1>
+        </header>
+        
         <!-- seção 1 -->
-        <h2>1. Color changer</h2>
-        <button id="gray_button">Gray</button>
-        <button id="blue_button">Blue</button>
-        <button id="pink_button">Pink</button>
-        <button >
+        <section>
+            <span>
+                <h2>1. Color changer</h2>
+                <img src="./assets/imgs/pencils.png" alt="">
+            </span>
+            <div class="btns_wrapper">
+                <button id="gray_button" class="btns">Gray</button>
+                <button id="blue_button" class="btns">Blue</button>
+                <button id="pink_button" class="btns">Pink</button>
+            </div>
+            <p>Change Color</p>
             <input id="choice_color" type="color">
-        </button>
-        <div id="color_box" class="gray"></div>        
-        <hr>
+            <p>Change Radius</p>
+            <input id="change_radius" type="range" value="0">
+            <div id="color_box" class="gray"></div>        
+        </section>
 
         <!-- seção 2 -->
-        <h2>2. Counter</h2>
-        <button id="counter_button">This fabulous button</button>
-        <button id="counter_btn_reset">Reset</button>
-        has been clicked <span id="countspan"></span> times.
-        <hr>
+        <section>
+            <span>
+                <h2>2. Counter</h2>
+                <img src="./assets/imgs/pitch-counter.png" alt="">
+            </span>
+            <div>
+                <button id="counter_button">This fabulous button</button>
+                <button id="counter_btn_reset">Reset</button>
+            </div>
+            has been clicked <span id="countspan"></span> times.
+        </section>
 
         <!-- seção 3 -->
-        <h2>3. Even or Odd?</h2>
-        <button id="even_or_odd_button">Is the count even or odd?</button>
-        <div id="evenOdd_result"></div>
+        <section>
+            <span>
+                <h2>3. Even or Odd?</h2>
+                <img src="./assets/imgs/questao.png" alt="">
+            </span>
+            <button id="even_or_odd_button">Is the count even or odd?</button>
+            <div id="evenOdd_result"></div>
+        </section>
 
         <!-- javascript -->
-        <script src="./script.js"></script>
+        <script src="./assets/script.js"></script>
     </body>
 </html>
